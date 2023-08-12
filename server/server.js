@@ -7,7 +7,7 @@ const connectDB = require('./config/db')
 dotenv.config()
 
 connectDB() ;
-const transactions = require('./routes/transactions') ;
+const transactions = require('./routes/transactions')
 
 const app = express() ;
 

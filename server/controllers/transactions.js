@@ -2,7 +2,7 @@ const Transaction = require('../modals/Transaction') ;
 
 // @desc : GET all Transactions 
 // @route : GET /api/v1/transactions 
-// @acess Public 
+// @access : Public 
 exports.getTransactions = async(req,res,next)=>{
     try{
         const transactions = await Transaction.find() ;
@@ -22,7 +22,7 @@ exports.getTransactions = async(req,res,next)=>{
 
 // @desc : Add  Transactions 
 // @route : POST /api/v1/transactions 
-// @acess Public 
+// @access Public 
 exports.addTransactions = async(req,res,next)=>{
     try{
         const {text , amount} = req.body ;
@@ -51,7 +51,7 @@ exports.addTransactions = async(req,res,next)=>{
 
 // @desc : Delete Transaction 
 // @route : DELETE /api/v1/transactions/:id 
-// @acess Public 
+// @access Public 
 exports.deleteTransactions = async(req,res,next)=>{
     try {
         const transaction = await Transaction.findById(req.params.id) ;
