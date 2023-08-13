@@ -13,7 +13,7 @@ const reducer =(state , action) =>{
             }
             case 'ADD_TRANSACTION':
                 return {
-                  ...state,
+                  ...state, 
                   transactions: [...state.transactions, action.payload]
                 }
             case 'TRANSACTION_ERROR' :
