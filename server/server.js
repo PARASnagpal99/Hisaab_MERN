@@ -2,14 +2,17 @@ const express = require('express') ;
 const dotenv = require('dotenv');
 const colors = require('colors');
 const morgan = require('morgan');
+const cors = require('cors'); // Import the cors package
 const connectDB = require('./config/db')
+const app = express() ;
 
 dotenv.config()
+app.use(cors());
+
 
 connectDB() ;
 const transactions = require('./routes/transactions')
 
-const app = express() ;
 
 app.use(express.json());
 
